@@ -83,3 +83,35 @@ audio("Amaury2.mp3","amaury2");
 audio("Amaury3y4.mp3","amaury3");
 audio("Amaury5.mp3","amaury4");
 audio("Amaury6.mp3","amaury5");
+
+
+window.onload = function() { 
+	$("#chartContainer").CanvasJSChart({ 
+		title: { 
+			text: "App",
+			fontSize: 24
+		}, 
+		axisY: { 
+			title: "Products in %" 
+		}, 
+		legend :{ 
+			verticalAlign: "center", 
+			horizontalAlign: "right" 
+		}, 
+		data: [ 
+		{ 
+			type: "pie", 
+			showInLegend: true, 
+			toolTipContent: "{label} <br/> {y} %", 
+			indexLabel: "{y} %", 
+			dataPoints: [ 
+				{ label: "Games",  y: 43.4, legendText: "Games"}, 
+				{ label: "Photography",    y: 8.3, legendText: "Photography"  }, 
+				{ label: "Social Media",   y: 47.10,  legendText: "Social Media"}, 
+				{ label: "Other",       y: 1.2,  legendText: "Others"}, 
+				
+			] 
+		} 
+		] 
+	}); 
+} 

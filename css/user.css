@@ -20,10 +20,6 @@ h3, h4, h2{
   color: #0e6ad3;
 }
 
-h2{
-  margin-bottom: 5%;
-}
-
 h4{
   font-size: 18px;
   display: inline-block;
@@ -32,6 +28,7 @@ h4{
 
 h2{
   font-size: 25px;
+  margin-bottom: 5%;
 }
 
 p.user-info{
@@ -89,25 +86,32 @@ img{
     background-color: rgb(53, 53, 53);
 }
 
-.persona .columns{
+.container-persona{
   background-color: #ffffff;
-  border-left: solid 1px;
+}
+
+.container-persona .columns{
+  background-color: #ffffff;
   padding: 2%;
 }
 
-.persona div:last-child{
-  border-left: none;
+.container-persona .columns:nth-child(3){
+  border-right: solid 1px;
+  border-left: solid 1px;
 }
 
-.persona div:nth-child(3){
-  border-left: none;
+@media only screen and (max-width: 64em){
+  .container-persona .columns:nth-child(3){
+  border-right: none;
+  border-left: solid 1px;
+  }
+  #third{
+    border-top: solid 1px;
+    border-right: solid 1px;
+  }
 }
 
-.persona div:nth-child(2){
-  border-left: none;
-}
-
-span.quote{
+.quote{
   background-color: #0e6ad3;
   padding: 10px;
 }
@@ -134,9 +138,6 @@ q{
   padding: 0 20px 0 20px;
 }
 
-.progress-meter{
-  padding: 11px 0 11px 0;
-}
 
 
 /*Style the footer of the page*/
