@@ -21,10 +21,23 @@ body{
 }
 
 .menu{
-	display: inline-block;
-	margin-bottom: -15px;
-	margin-left: 10px;
   background-color: #000000;
+  margin-top: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 40em){
+  .menu{
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  }
+  .menu li{
+    display: block;
+  }
 }
 
 .nav{
