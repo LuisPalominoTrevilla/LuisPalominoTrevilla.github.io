@@ -6,7 +6,8 @@ var button_show = $(".unhide");
 hide_temporal.hide();
 var is_hidden = true;
 
-$("img").animate({left: '0', opacity: 1}, 1500);
+$("#right").animate({left: '0', opacity: 1}, 1500);
+$("#left").animate({right: '0', opacity: 1}, 1500);
 
 
 button_show.on('click', function(){

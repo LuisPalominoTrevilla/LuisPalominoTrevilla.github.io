@@ -54,15 +54,16 @@ p{
 img{
     border-radius: 90px;
     position: relative;
-    opacity: 0;
 }
 
 #left{
   right: 600px;
+  opacity: 0;
 }
 
 #right{
   left: 600px;
+  opacity: 0;
 }
 
 .interviews{
