@@ -2,81 +2,79 @@
 <html lang="us">
     <head>
     	<meta charset="utf-8">
-    	<title>Buy this page</title>
+    	<title>Proyect Proposal</title>
     	<link href="jquery-ui.css" rel="stylesheet">
+    	<link rel="stylesheet" href="../css/foundation.css">
+    	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     	<style>
     	
     	body{
     		font-family: "Trebuchet MS", sans-serif;
-    		margin: 5%;
     	}
     	
-    	header{
-    	    background-color: #424344;
-    	    position: fixed;
-    	    top: 0;
-    	    left: 0;
-    	    right: 0;
-    	    height: 70px;
-    	    padding: .5%;
+    	.title-bar{
+    	  background-color: #4f8cef;
     	}
-    	
-    	h1{
-    	    color: #ffffff;
-    	    display: inline-block;
-    	    margin-left: 3%;
-    	   
-    	}
+
     	
     	fieldset {
-          border: 0;
-        }
+        border: 0;
+      }
         
-        label {
-          display: block;
-          margin: 30px 0 0 0;
-        }
-        
-        #accordion{
-            width: 40%;
-        }
-    	
+      label {
+        display: block;
+        margin: 30px 0 0 0;
+        font-size: 25px;
+      }
+      
+      #accordion{
+        margin-top: 4%;
+      }
     	</style>
     </head>
     <body>
+      
+      
+      <div class="title-bar">
+        <div class="title-bar-left">
         
-        <header>
-            <a href="../index.html" ><img src="images/return.png" width="40px"></img></a>
-            <h1>Proyect proposal</h1>
-        </header>
+        <a href="../index.html" ><img src="images/return.png" width="40px"></img></a>
+        <span class="title-bar-title" style="color: black; font-size: 25px; font-family: bitter">Proyect Proposal</span>
+      </div>
+      </div>
         
-        
-        
-        <h1>YOUR COMPONENTS:</h1>
-        
-        <div id="accordion">
+      <div class="row"> 
+        <div id="accordion" class="large-12 columns">
           <h3>Abstract</h3>
           <div>
             <p>
-            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            Did you like the page that we built? Would you like to pay for our services to have your own 
+            web page? If you are interested, you can see the details of and pricing of the web page of your dreams below.
             </p>
             <div>
               <fieldset>
-                  <label>Select part</label>
+                  <label>Select Option</label>
                   <select name="speed" id="menu">
-                    <option>Pricing</option>
-                    <option>Slow</option>
-                    <option selected="selected">Medium</option>
-                    <option>Fast</option>
-                    <option>Faster</option>
+                    <option selected="selected">How will it be done?</option>
+                    <option>Why a web page?</option>
+                    <option >Why us?</option>
                   </select>
               </fieldset>
-              
-              <button id="continue">Continue</button>
+              <button id="continue" style="margin-top: 2%">Continue</button>
             </div>
+            
+            <div id="first">
+              First section
+            </div>
+            
+            <div id="second">
+              Second section
+            </div>
+            
+            <div id="third">
+              Third section
+            </div>
+            
           </div>
           <h3>Proyect Description</h3>
           <div>
@@ -116,44 +114,36 @@
             </p>
           </div>
         </div>
-        
-        <button id="unhide">Show price</button>
-        
-        
-        
+      </div> 
 
 
         <script src="external/jquery/jquery.js"></script>
         <script src="jquery-ui.js"></script>
+        <script src="../js/vendor/foundation.js"></script>
         <script>
+        
+        
         $( function() {
             $( "button" ).button();
-            $(".hide").hide();
+            
+            var hidden = [$("#first"), $("#second"), $("#third")];
+            
+            $("#first").hide();
+            $("#second").hide();
+            $("#third").hide();
             $("#accordion").accordion();
-            
-            
-            var is_hidden = true;
             
             $("#menu").selectmenu();
             
             var options = $("option").toArray();
             
-            $("#unhide").click( function() {
-                if(is_hidden){
-                    $( ".hide" ).show("slide", {}, 500, callback );
-                    is_hidden = false;
-                    $("#unhide").html("hide price");
-                }else{
-                    $( ".hide" ).hide("bounce", {}, 500, callback );
-                    is_hidden = true;
-                    $("#unhide").html("show price");
-                }
-            });
             
             $("#continue").click(function(){
                 for(var i = 0; i < options.length; i++){
                     if(options[i].selected){
-                        console.log(i);
+                        hidden[i].show("slide", {}, 500, callback);
+                    }else{
+                      hidden[i].hide("slide", {}, 500, callback );
                     }
                 }
             });
@@ -164,13 +154,6 @@
               }, 1000 );
             };
             
-            $('#datepicker').click(function(){
-                $(location).attr('href', 'mailto:luispalominot3@gmail.com?subject='
-                                         + encodeURIComponent("This is my subject")
-                                         + "&body=" 
-                                         + encodeURIComponent("This is my body")
-                );
-            });
             
         });
         </script>
