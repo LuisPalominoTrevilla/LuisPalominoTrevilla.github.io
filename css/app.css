@@ -1,11 +1,11 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #84a4d8;
+  
 }
 
 .exam{
-  background-color: #60840b;
+  background-color: black;
 }
 
 .title-bar{
@@ -97,6 +97,11 @@ body{
 
 .title h1{
   font-family: 'Indie Flower', cursive;
+}
+
+h2{
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
 }
 
 .orbit-slide{
@@ -228,3 +233,14 @@ body{
     100% {width: 200px;}
 }
 
+p{
+  text-align: left;
+  color: rgb(30,144,255);
+}
+.h3{
+  color: gray ;
+}
+h5{
+  text-decoration: bold;
+  color: gray ;
+}

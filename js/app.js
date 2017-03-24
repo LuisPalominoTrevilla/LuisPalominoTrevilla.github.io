@@ -36,6 +36,11 @@ button_show.on('click', function(){
 	button_show.hide();  //Hide the button once it is pressed
 });
 
+
+
+
+// End of script used in exam.html
+
 //The following code was retrieved from http://www.coffeecup.com/forums/foundation-framer/adding-a-scroll-transition-to-a-link-on-same-page/
 
 $(document).ready(function(){

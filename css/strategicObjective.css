@@ -9,10 +9,10 @@ body{
 .section{
     background-color: #ffffff;
     height: 90vh;
-    margin-top: 100vh;
+    margin-top: 35%;
 }
 
-#first, #second{
+#first, #second, #third{
     height: 10vh;
     background-color: #ffffff;
 }
