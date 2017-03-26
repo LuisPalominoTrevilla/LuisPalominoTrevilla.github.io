@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #129cb5;
+  background-color: #365a93;
 }
 
 .exam{
@@ -233,7 +233,7 @@ h2{
     100% {width: 200px;}
 }
 
-p{
+.texti{
   text-align: left;
   color: rgb(30,144,255);
 }
@@ -243,4 +243,27 @@ p{
 h5{
   text-decoration: bold;
   color: gray ;
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  background:gray;
+}
+
+.play{
+  border-radius: 100%;
+  height:60px;
+  width:60px;
+  margin-bottom: 10px;
+}
+.fondo{
+    z-index:-1000;
 }
