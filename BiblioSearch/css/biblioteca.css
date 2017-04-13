@@ -1,0 +1,109 @@
+.title-bar{
+    background-color: rgb(178, 178, 178);
+    padding: .6% 3% .6% 3%;
+}
+
+span > h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #072c68;
+    margin-top: 2.5%;
+}
+
+.nav-container, .menu{
+    background-color: #225bb7;
+    z-index: 100;
+}
+
+.menu > li{
+    border-right: solid 1px #ffffff;
+    transition: background-color .5s;
+}
+
+.menu > li:last-child{
+    border-right: none;
+}
+
+.menu > li:hover{
+    background-color: #1f7def;
+}
+
+.sub > li{
+    border-right: none;
+    border-top: solid 1px #ffffff;
+}
+
+.sub > li:first-child{
+    border-top: none;
+}
+
+.current{
+    background-color: #1f7def;
+}
+
+.menu > li > a{
+    color: #ffffff;
+}
+
+/* Style the footer*/
+
+.footer{
+    background-color: #225bb7;
+    width: 100%;
+    position: relative;
+    margin-top: 3em;
+    padding: 0 0 0 1vw;
+}
+
+.footer-section{
+    display: inline-block;
+    width: 32vw;
+    padding: 1% 0 1% 0;
+}
+
+#center{
+    border-left: solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
+    text-align: center;
+}
+
+#right{
+    text-align: right;
+}
+
+.footer-section > a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Start with the main contents of Inicio */
+#title > h2{
+    color: #225bb7;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card{
+    padding: 5%;
+    box-shadow: 8px 8px 5px #b3b3b3;
+    transition: box-shadow .3s;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 5px #888888;
+}
+
+
+.logout{
+    background-image: url('../images/logout.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px!important;
+    background-color: #ffffff;
+}
+
+.logout:hover{
+    background-image: url('../images/logout-white.png');
+    background-color: #000000;
+}
