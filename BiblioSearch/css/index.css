@@ -8,7 +8,8 @@ body{
 
 .title-bar{
     background-color: rgb(178, 178, 178);
-    padding: 1% 0 1% 0;
+    padding: .3% 0 .5% 0;
+    height: 6vh;
 }
 
 .log-in-form {
@@ -21,11 +22,12 @@ body{
 }
 
 form{
-    margin-top: 65%;
+    margin-top: 20vh;
 }
 
 .logo-tec{
     margin-left: 3%;
+    width: 10%;
 }
 
 label, h4, a{
@@ -61,6 +63,6 @@ label, h4, a{
 .error-msg{
     color: #ff0000;
     display: none;
-    margin-top: 5%;
+    margin-top: 3%;
     font-size: 18px;
 }

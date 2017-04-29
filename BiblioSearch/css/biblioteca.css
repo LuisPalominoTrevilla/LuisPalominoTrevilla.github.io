@@ -20,6 +20,13 @@ span > h3{
     transition: background-color .5s;
 }
 
+.menu > li > a{
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
 .menu > li:last-child{
     border-right: none;
 }
@@ -52,7 +59,7 @@ span > h3{
     width: 100%;
     position: relative;
     margin-top: 3em;
-    padding: 0 0 0 1vw;
+    padding: 0 0 0 2vw;
 }
 
 .footer-section{
@@ -94,6 +101,14 @@ span > h3{
     box-shadow: 5px 5px 5px #888888;
 }
 
+.card > a{
+    display: block;
+    margin-bottom: 16px;
+    color: #225bb7;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 
 .logout{
     background-image: url('../images/logout.png');
@@ -106,4 +121,86 @@ span > h3{
 .logout:hover{
     background-image: url('../images/logout-white.png');
     background-color: #000000;
+}
+
+#campus{
+    width: 40%;
+}
+
+.campus{
+    margin-top: 15%;
+}
+
+.calendar{
+    float: right;
+}
+
+#events{
+    width: 26%;
+}
+
+#events > h2{
+    font-size: 24px;
+    text-align: center;
+    color: #225bb7;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 10%;
+}
+
+#search-bar > h2{
+    font-size: 28px;
+    text-align: left;
+    color: #225bb7;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Editar search box*/
+
+.tabs{
+    border: 1px solid #b7b7b7;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#tab1 > a{
+    border-top-left-radius: 12px;
+}
+
+.tabs > li > a{
+    color: black;
+}
+
+.tabs-title > a{
+    transition: .3s;
+}
+
+.is-active > a{
+    color: black !important;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tabs-title > a:hover{
+    color: #000000 !important;
+    background-color: #f4f4f4;
+}
+
+#panel1 > h2{
+    font-size: 20px;
+    text-align: left;
+    color: #225bb7;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.infoImg{
+    width: 10%;
+    display: inline-block;
+}
+
+.infoP{
+    display: inline-block;
+    width: 80%;
+    margin-left: 5%;
 }
