@@ -101,7 +101,7 @@
     <!-- Poner todos los resultados arrojados -->
     <div class="row" id="results">
       <div class="large-6 columns">
-        <img src="" width="60%" class="image-book"></img>
+        <img src="" width="40%" class="image-book"></img>
       </div>
       <div class="large-6 columns text-center">
         <p class="nombre"></p>
@@ -168,8 +168,12 @@ var database = {
 $("#results").hide();
 
 $(".search").on('click', function(){
+  
   var busqueda = $('.search-box').val().toLowerCase();
+  console.log(busqueda);
+  
   $.each(database.libros, function(i, v) {
+    console.log(v.nombre);
     if (v.nombre == busqueda) {
       $(".image-book").attr('src', v.imagen);
       $(".img").css('top',v.ypos + "%");
