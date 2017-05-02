@@ -204,3 +204,18 @@ span > h3{
     width: 80%;
     margin-left: 5%;
 }
+#results{
+    background-color: #3a6cbc;
+    margin-top: 5%;
+    padding: 2%;
+}
+.ubicacion{
+    color: #ffffff;
+    background-color: #0e3470;
+    padding: 2%;
+    border-radius: 20px;
+}
+.nombre{
+    font-weight: bolder;
+    font-size: 28px;   
+}

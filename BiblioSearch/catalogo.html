@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Busqueda</title>
     <link href="jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/foundation.css">
     <link rel="stylesheet" href="css/biblioteca.css">
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <style type="text/css">
+			.img{
+			  position: absolute;
+			  
+			}
+    </style>
   </head>
   <body>
     <!-- Title Bar -->
@@ -24,10 +30,10 @@
     
     <div class="nav-container">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li class="current"><a href="inicio.html">Inicio</a></li>
+        <li><a href="inicio.html">Inicio</a></li>
         <li><a href="#luu">Mi Cuenta</a></li>
         <li><a href="#">Mis Bases de datos</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
+        <li class="current"><a href="#">Catálogo</a></li>
         <li><a href="#">Recursos</a>
           <ul class="menu sub">
             <li><a href="#">Catálogo</a></li>
@@ -49,59 +55,11 @@
       </ul>
     </div>
     
-    <!-- Image slide show -->
-    <div class="row top">
-      <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-        <ul class="orbit-container">
-          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-          <li class="is-active orbit-slide">
-            <img class="orbit-image" src="images/tec.jpg" alt="Space">
-            <figcaption class="orbit-caption"></figcaption>
-          </li>
-          <li class="orbit-slide">
-            <img class="orbit-image" src="images/tec.jpg" alt="Space">
-            <figcaption class="orbit-caption"></figcaption>
-          </li>
-          <li class="orbit-slide">
-            <img class="orbit-image" src="images/tec.jpg" alt="Space">
-            <figcaption class="orbit-caption"></figcaption>
-          </li>
-          <li class="orbit-slide">
-            <img class="orbit-image" src="images/tec.jpg" alt="Space">
-            <figcaption class="orbit-caption"></figcaption>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="row" style="margin-top: 5%">
-      <div class="large-4 columns" id="title">
-        <h2>Bienvenido {{username}}</h2>
-        <div class="card">
-          <p><b>Correo institucional: </b> {{mail}}</p>
-          <p><b>Nombre: </b> {{username}} {{lastName}}</p>
-          <p><b>Ejemplares Prestados: </b> {{renta}}</p>
-          <p><b>Ejemplares Devueltos: </b> {{devolucion}}</p>
-          <a>Historial de Préstamos</a>
-          <a>Renovaciones</a>
-          <button class="button logout" title="Cerrar Sesión"></button>
-        </div>
-      </div>
-      <div class="large-4 columns text-centered" id="campus">
-        <img src="images/campus.jpg" class="campus"></img>
-        
-      </div>
-      <div class="large-4 columns" id="events">
-        <h2>Próximos Eventos</h2>
-        <div id="datepicker" class="calendar"></div>
-      </div>
-    </div>
     
     <div class="row" style="margin-top: 5%" >
       
-      <div class="large-8 columns" id="search-bar">
-        <h2>Buscar en Biblioteca</h2>
+      <div class="large-12 columns" id="search-bar">
+        <h2 style="text-align: center">Catalogo</h2>
         <ul class="tabs" data-tabs id="example-tabs">
           <li class="tabs-title is-active" id="tab1"><a href="#panel1" aria-selected="true">Catálogo</a></li>
           <li class="tabs-title"><a href="#panel2">Servicios del catálogo</a></li>
@@ -110,7 +68,12 @@
         <div class="tabs-content" data-tabs-content="example-tabs">
           <div class="tabs-panel is-active" id="panel1">
             <h2>Encuentra materiales en Biblioteca:</h2>
-            <a class="button" style="display: block; width:30%; color: #ffffff !important" href="catalogo.html">Buscar en el catálogo</a>
+            <div class="input-group">
+              <input class="input-group-field search-box" type="text" placeholder="Buscar libros, revistas etc..">
+              <div class="input-group-button">
+                <input type="button" class="button search" value="Buscar">
+              </div>
+            </div>
             <img src="images/info.png" class="infoImg"></img>
             <p class="infoP">
               Los materiales que puedes localizar en el Catálogo pueden ser libros, revistas, películas, 
@@ -135,21 +98,95 @@
       </div>
     </div>
     
-
+    <!-- Poner todos los resultados arrojados -->
+    <div class="row" id="results">
+      <div class="large-6 columns">
+        <img src="" width="60%" class="image-book"></img>
+      </div>
+      <div class="large-6 columns text-center">
+        <p class="nombre"></p>
+        <p class="text-center"><a data-open="exampleModal1" class="ubicacion">Ver Ubicacion</a></p>
+      </div>
+    </div>
+    
+    
+    <div class="reveal" id="exampleModal1" data-reveal style="position: relative; width: 100%">
+      <img src="images/BiblioMap.png">
+      <img src="images/BiblioMap2.png">
+      <img class="img"src="pin.png" width="6%">
+      <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    
+    <!-- 
+    <ul>
+    <li v-for="libro in libros" class="amigos">
+       
+       {{ libro.libro }}
+       <p class="text-center"><a data-open="exampleModal1"onclick="imagenes(0)">Contact</a></p>
+       <div class="reveal" id="exampleModal1" data-reveal style="position: relative; width: 100%">
+      <img src="images/BiblioMap.png">
+      <img src="images/BiblioMap2.png">
+      <img class="img"src="pin.png" width="10%">
+      <button class="close-button" data-close aria-label="Close reveal" type="button" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+       </li>
+  </ul>
+    -->
+    
+    
     <!-- Footer -->
     <div class="footer">
       <div class="footer-section"><a href="https://tec.mx/es/aviso-legal" target="_blank">Aviso legal</a></div>
       <div class="footer-section" id="center"><a href="https://tec.mx" target="_blank">® Instituto Tecnológico y de Estudios Superiores de Monterrey, México. 2015</a></div>
       <div class="footer-section" id="right"><a href="https://tec.mx/es/politicas-de-privacidad-del-tecnologico-de-monterrey" target="_blank">Aviso de privacidad</a></div>
     </div>
-    
+   	<!--  <div style="position:absolute; top:10%; left:20%; visibility:visible z-index:1">
+<img height="70%" src="pin.png" width="80%">
+</div> -->
     <script src="external/jquery/jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="../js/vendor/what-input.js"></script>
     <script src="../js/vendor/foundation.js"></script>
-    <script src="js/biblioteca.js"></script>
+    <script src="js/catalogo.js"></script>
     <script>
+   
+var database = {
+  "libros": [
+    {"nombre": "precalculus", "imagen": "images/precalculus.jpg", "xpos": 35, "ypos":20},
+    {"nombre": "university physics", "imagen": "images/physics.jpg", "xpos": 60, "ypos":54},
+    {"nombre": "calculus", "imagen": "images/calculus.jpg", "xpos": 65, "ypos":13},
+    {"nombre": "java", "imagen": "images/javap.jpg", "xpos": 30, "ypos":20},
+    {"nombre": "discrete math", "imagen": "images/discrete.jpg", "xpos": 62, "ypos":22}
+  ]
+}
+
+$("#results").hide();
+
+$(".search").on('click', function(){
+  var busqueda = $('.search-box').val().toLowerCase();
+  $.each(database.libros, function(i, v) {
+    if (v.nombre == busqueda) {
+      $(".image-book").attr('src', v.imagen);
+      $(".img").css('top',v.ypos + "%");
+      $(".img").css('left',v.xpos + "%");
+      $(".nombre").html(v.nombre);
+      $("#results").show();
+      myViewModel.data = v.nombre;
+        return;
+    }
+});
+});
+
+var myViewModel = new Vue({
+  el: '#results',
+  data: database
+});
+
 
   </script>
   </body>
