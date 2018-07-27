@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="us">
+    <head>
+    	<meta charset="utf-8">
+    	<title>Proyect Proposal</title>
+    	<link href="jquery-ui.css" rel="stylesheet">
+    	<link rel="stylesheet" href="../css/foundation.css">
+    	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    	
+    	<style>
+    	
+    	body{
+    		font-family: "Trebuchet MS", sans-serif;
+    		background-color: #84a4d8;
+    	}
+    	
+    	.intro{
+    	  background-color: #ffffff;
+    	  margin-top: 2%;
+    	  padding: 1% 2% 1% 2%;
+    	  box-shadow: 8px 8px 5px #888888;
+        transition: .3s box-shadow;
+      }
+      
+      .intro:hover{
+        box-shadow: 1px 1px 1px #888888;
+      }
+    	
+    	.title-bar{
+    	  background-color: #1b2f4f;
+    	}
+    	
+    	.title-bar-left{
+    	  width: 40%;
+    	}
+
+    	
+    	fieldset {
+        border: 0;
+      }
+        
+      label {
+        display: block;
+        margin: 30px 0 0 0;
+        font-size: 25px;
+      }
+      
+      #accordion{
+        margin-top: 4%;
+      }
+      
+      .ui-accordion-header-active{
+         background:  #1b2f4f;
+      }
+
+      h2{
+        font-family: 'Lobster', normal;
+        font-size: 25px;
+        border-bottom: 1px solid;
+      }
+      
+      h3{
+        color: #000000;
+      }
+      
+      p{
+        text-align: justify;
+        text-indent: 86px;
+        font-size: 16px;
+        font-family: 'Quicksand', sans-serif;
+      }
+      
+      /* Style the footer of the page*/
+
+      .full-width {
+        max-width: 1400px;
+      }
+      
+      .footer {
+        background-color: #000000;
+        padding: 2rem 4rem;
+        text-align: center;
+        color: #fff;
+        margin-top: 15%;
+      }
+      .footer i {
+        font-size: 100px;
+      }
+      
+      .footer h4 {
+        color: #fff;
+        font-size: 1em;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-top: 2.5rem;
+        margin-bottom: 10px;
+      }
+      .footer p, .footer a {
+        font-weight: 300;
+        font-size: .8em;
+        color: #fff;
+      }
+      
+      @media only screen and (min-width: 40.063em) {
+        .footer .columns:nth-child(n+2) {
+          border-left: 1px solid #b3b3b3;
+          min-height: 280px;
+        }
+      }
+      .footer-links {
+        list-style-type: none;
+      }
+      .footer-links li {
+        margin-top: .5em;
+      }
+      .contact{
+        background-color: #ffffff;
+        margin-top: 4%;
+        box-shadow: 8px 8px 5px #888888;
+        transition: .3s box-shadow;
+      }
+      
+      .contact:hover{
+        box-shadow: 1px 1px 1px #888888;
+      }
+      
+      img{
+        border-radius: 50px;
+      }
+      .luis, .sergio{
+        padding: 2%;
+      }
+      .button.custom{
+        margin-left: 10%;
+        background-color: #506484;
+        
+      }
+      .button.custom:hover{
+        background-color: #1b2f4f;
+      }
+      
+      q{
+        font-style: italic;
+      }
+      
+      h4{
+        font-weight: bold;
+        font-size: 35px;
+        font-family: 'Oswald', sans-serif;
+        margin-top: 10%;
+      }
+      
+      h6{
+        font-family: 'Oswald', sans-serif;
+        display: inline-block;
+        font-size: 16px;
+      }
+      
+      li.pricing{
+        line-height: 1 em;
+        height: auto;
+        list-style: none;
+      }
+      
+      /* Style the scrollbar */
+      ::-webkit-scrollbar {
+          width: 14px;
+      }
+       
+      ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+          border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+          border-radius: 6px;
+          background: #1b2f4f;
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+      }
+
+    	</style>
+    </head>
+    <body>
+      
+      
+      <div class="title-bar">
+        <div class="title-bar-left">
+        
+        <a href="../index.html" ><img src="images/return.png" width="40px"></img></a>
+        <span class="title-bar-title" style="color: #ffffff; font-size: 20px; font-family: bitter; margin-left: 5%">Proyect Proposal</span>
+      </div>
+      </div>
+      
+      <div class="row intro">
+        <p>
+            Did you like this website? Would you like to have your own?
+            If you are interested, you can see the details and pricing of the web page of your dreams below.
+          </p>
+      </div>
+
+        
+      <div class="row"> 
+        <div id="accordion" class="large-9 columns">
+          <h3>Abstract</h3>
+          <div>
+            
+            <div class="large-4 columns text-center" style="margin-top: 4%">
+              <fieldset>
+                  <label>Select Option</label>
+                  <select name="speed" id="menu">
+                    <option selected="selected">How will it be done?</option>
+                    <option>Why a web page?</option>
+                    <option >Why us?</option>
+                  </select>
+              </fieldset>
+              <button id="continue" style="margin-top: 2%">Continue</button>
+            </div>
+            
+            <div class="large-8 columns text-center" style="margin-top: 4%">
+              <div id="first">
+                <h2>How will it be done?</h2>
+                <p>
+                  When you buy one of our services, you are guaranteed a high quality product with special support from our team.
+                  The page that you will receive will be developed depending on your company's needs. Our developers will work hard to produce  
+                  your desired website. Then a non-functional prototype
+                  will be presented in order to correct mistakes and add new features according to your needs, after that you will get the entire product with one year of 
+                  warranty and specialized support from our developers.
+                </p>
+              </div>
+              
+              <div id="second">
+                <h2>Why do you need a web page?</h2>
+                <p>Every company that wants to succeed needs a website, it doesn't matter the type of company. It is proven that small businesses will gain credibility 
+                by having their own website. Having a website will allow your company to keep in contact with the customers, and if you want to sell any products or services
+                you will have the opportunity to target a wider market. It's the wiser desicion you can take!
+                </p>
+              </div>
+              
+              <div id="third">
+                <h2>Why choose us?</h2>
+                <p>There are many different options to choose from the market,at the end, it all comes down to your needs. But if you want to have a 
+                good quality page at a reasonable and accesible price, then we are your best option. Our developers are hard working people that can create a 
+                high quality web page with everything that our clients want. Before we start any proyect, we want to make sure that we 
+                understand our client's needs. We want our client to get the best service we can offer, and to have the website of his dreams.<br> <q>If the client wants something, he'll have it</q> </p>
+              </div>
+            </div>
+            
+          </div>
+          <h3>Proyect Description</h3>
+          <div>
+            <p style="margin-top: 2%">
+              The website that we have right now was started on Juanuary. Up to this date, around 19 hours of work have been required to 
+              get to where we are today. First, the <q>Partial Proyect</q> page was made, using a simple layout displaying the content 
+              in only one page. Then, other pages were added with a different design to have variety in our website and experiment 
+              with different styles. Basic knowledge of HTML5, CSS3 and Javascript as well as Foundation, jQuery and jQuery UI were used 
+              to create this proyect.
+            </p>
+            <p>
+              All of the content in our website, except for some of the images, was made by us. With our previous knowledge and 
+              the research we'd made, we created the website's content. The video displayed in the user analysis webpage was recorded 
+              and edited by us. The main objective of this webpage is to let the user know the problem that we've spotted and propose an 
+              original and technological solution to it.
+            </p>
+          </div>
+          <h3>Pricing</h3>
+          <div class="text-center">
+            <p>
+              The price of the website that you need will depend on different factors.
+              If you would like to have a more personalized estimate, please contact one of the developers 
+              and they'll guide you through the process. Here is an estimate fare for the website that we currently have 
+              and its considerations.
+            </p>
+            
+            <ul class="large-6 columns">
+              <li class="pricing">Wage: <h6>$150.00 USD</h6></li>
+              <li class="pricing">Hour fare: <h6>$12.50 USD</h6></li>
+              <li class="pricing">Hours invested: <h6>19hrs x $12.50 USD = $237.50 USD</h6></li>
+              <li class="pricing">Creating original content: <h6>$89.00 USD</h6></li>
+              <li class="pricing">Hosting: <h6>$4.00 USD</h6></li>
+              <li class="pricing">Other expenses: <h6>$55.00 USD</h6></li>
+            </ul>
+            
+            <h4 class="large-4 columns">$ 535.50 USD</h4>
+          </div>
+          <h3>Cronogram</h3>
+          <div>
+            <p>If you choose to buy our services, first you will get an estimate for the website you want to have. 
+            Then, you have to pay 35% of the total price in advance. In less than one week, we'll call you and show you the 
+            prototype to see what other features you'd like to add. Then we'll start building the site. Afterwards, we would like to have three revisions with the finished product to 
+            test usability and make sure that you are satisfied with it. Once the website is done you'll have two years of free 
+            hosting and one year of warranty.</p>
+            <h2>Considerations</h2>
+            <ul>
+              <li>You'll be given the option to buy extended hosting and warranty for a special fee.</li>
+              <li>The revisions are necessary for the website to work as you expect.</li>
+              <li>The time it takes to build the site will depend on the type of website</li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="large-3 columns contact text-center">
+          <h2>Contact us!</h2>
+          <div class="luis">
+            <img src="../luis.jpg" width="90px">
+            <a type="button" class="button custom" href="https://www.facebook.com/palominotrevilla" target="_blank">Luis Palomino</a>
+          </div>
+          <div class="sergio">
+            <img src="../sergio.jpg" width="90px">
+            <a type="button" class="button custom" href="https://www.facebook.com/sombiy" target="_blank">Sergio Omar</a>
+          </div>
+        </div>
+      </div> 
+      
+      
+      
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row full-width">
+          <div class="small-12 medium-3 large-4 columns">
+            <i class="fi-laptop"></i>
+            <p>This site was created using Foundation<br>Javascript, JQuery UI and css were used to make the webpage more original and interactive</p>
+          </div>
+          <div class="small-12 medium-3 large-4 columns">
+            <i class="fi-html5"></i>
+            <p>In this site you can find all the information you need to take the decision and buy our services. If you have any questions or suggestions regardin the pricing, please contact any of the developers and they will get back to you as soon as possible.</p>
+          </div>
+          <div class="small-6 medium-3 large-2 columns">
+            <h4>Work With Me</h4>
+            <ul class="footer-links">
+              <li><a href="#">What I Do</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ's</a></li>
+            <ul>
+          </div>
+          <div class="small-6 medium-3 large-2 columns">
+            <h4>Follow Me</h4>
+            <ul class="footer-links">
+              <li><a href="https://github.com/LuisPalominoTrevilla" target="_blank">GitHub</a></li>
+              <li><a href="https://www.facebook.com/palominotrevilla" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/luis_palominot" target="_blank">Twitter</a></li>
+            <ul>
+          </div>
+        </div>
+      </footer>
+      
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="../js/vendor/foundation.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+        <script>
+        
+        
+        $( function() {
+            $("button").button();
+
+            
+            var hidden = [$("#first"), $("#second"), $("#third")];
+            
+            $("#first").hide();
+            $("#second").hide();
+            $("#third").hide();
+            $("#accordion").accordion();
+            
+            $("#menu").selectmenu();
+            
+            var options = $("option").toArray();
+            
+            
+            $("#continue").click(function(){
+                for(var i = 0; i < options.length; i++){
+                    if(options[i].selected){
+                        hidden[i].show("slide", {}, 500, callback);
+                    }else{
+                      hidden[i].hide();
+                    }
+                }
+            });
+            
+            function callback() {
+              setTimeout(function() {
+                $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+              }, 1000 );
+            };
+            
+            
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="css/biblioteca.css">
+    <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <div class="title-bar-left">
+        <img src="images/foto.jpg" width="180px" class="logo-tec"></img>
+      </div>
+      <div class="title-bar-right">
+        <span><h3>Bibliotecas del Tecnológico de Monterrey</h3></span>
+      </div>
+    </div>
+    
+    <div class="nav-container">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="current"><a href="inicio.html">Inicio</a></li>
+        <li><a href="#luu">Mi Cuenta</a></li>
+        <li><a href="#">Mis Bases de datos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="#">Recursos</a>
+          <ul class="menu sub">
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="#">Bases de datos</a></li>
+            <li><a href="#">Portal de investigación</a></li>
+            <li><a href="#">Reserva</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li id="last"><a href="#">Ayuda</a>
+          <ul class="menu sub">
+            <li><a href="#">Consultar a un experto</a></li>
+            <li><a href="#">Citar y referenciar</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Sugerencias y comentarios</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Image slide show -->
+    <div class="row top">
+      <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+        <ul class="orbit-container">
+          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+          <li class="is-active orbit-slide">
+            <img class="orbit-image" src="images/tec.jpg" alt="Space">
+            <figcaption class="orbit-caption"></figcaption>
+          </li>
+          <li class="orbit-slide">
+            <img class="orbit-image" src="images/tec.jpg" alt="Space">
+            <figcaption class="orbit-caption"></figcaption>
+          </li>
+          <li class="orbit-slide">
+            <img class="orbit-image" src="images/tec.jpg" alt="Space">
+            <figcaption class="orbit-caption"></figcaption>
+          </li>
+          <li class="orbit-slide">
+            <img class="orbit-image" src="images/tec.jpg" alt="Space">
+            <figcaption class="orbit-caption"></figcaption>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="row" style="margin-top: 5%">
+      <div class="large-4 columns" id="title">
+        <h2>Bienvenido {{username}}</h2>
+        <div class="card">
+          <p><b>Correo institucional: </b> {{mail}}</p>
+          <p><b>Nombre: </b> {{username}} {{lastName}}</p>
+          <p><b>Ejemplares Prestados: </b> {{renta}}</p>
+          <p><b>Ejemplares Devueltos: </b> {{devolucion}}</p>
+          <a>Historial de Préstamos</a>
+          <a>Renovaciones</a>
+          <button class="button logout" title="Cerrar Sesión"></button>
+        </div>
+      </div>
+      <div class="large-4 columns text-centered" id="campus">
+        <img src="images/campus.jpg" class="campus"></img>
+        
+      </div>
+      <div class="large-4 columns" id="events">
+        <h2>Próximos Eventos</h2>
+        <div id="datepicker" class="calendar"></div>
+      </div>
+    </div>
+    
+    <div class="row" style="margin-top: 5%" >
+      
+      <div class="large-8 columns" id="search-bar">
+        <h2>Buscar en Biblioteca</h2>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active" id="tab1"><a href="#panel1" aria-selected="true">Catálogo</a></li>
+          <li class="tabs-title"><a href="#panel2">Servicios del catálogo</a></li>
+        </ul>
+        
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <h2>Encuentra materiales en Biblioteca:</h2>
+            <a class="button" style="display: block; width:30%; color: #ffffff !important" href="catalogo.html">Buscar en el catálogo</a>
+            <img src="images/info.png" class="infoImg"></img>
+            <p class="infoP">
+              Los materiales que puedes localizar en el Catálogo pueden ser libros, revistas, películas, 
+              cd-roms, entre otros, en formato físico. También puedes localizar títulos de fuentes electrónicas como libros y revistas.
+            </p>
+          </div>
+          <div class="tabs-panel" id="panel2">
+            <ul>
+              <li>Renovación: Extender la fecha de devolución del material si otro usuario no lo está esperando.</li>
+              <li>Apartado de material: El apartado de material es un servicio que permite a un usuario “reservar” un material para que le sea prestado cuando dicho material esté disponible, 
+              o bien, que pertenece a otro campus. Es posible apartar materiales en cualquiera de los siguientes casos:
+                <ul>
+                  <li>Cuando un material está prestado, y queremos obtenerlo una vez que sea devuelto.</li>
+                  <li>Cuando el material está en cualquier estatus distinto a “Disponible”, ya sea “En encuadernación”, “Catalogación”, etc.</li>
+                  <li>Cuando el material pertenece a la biblioteca de otro campus, y queremos que nos lo envíen a nuestra biblioteca.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-section"><a href="https://tec.mx/es/aviso-legal" target="_blank">Aviso legal</a></div>
+      <div class="footer-section" id="center"><a href="https://tec.mx" target="_blank">® Instituto Tecnológico y de Estudios Superiores de Monterrey, México. 2015</a></div>
+      <div class="footer-section" id="right"><a href="https://tec.mx/es/politicas-de-privacidad-del-tecnologico-de-monterrey" target="_blank">Aviso de privacidad</a></div>
+    </div>
+    
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../js/vendor/what-input.js"></script>
+    <script src="../js/vendor/foundation.js"></script>
+    <script src="js/biblioteca.js"></script>
+    <script>
+
+  </script>
+  </body>
+</html>
